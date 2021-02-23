@@ -1,0 +1,32 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: gateway
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    discovery:
+      instance-id: ${spring.application.name}:${server.port}
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service1
+          uri: lb://service1
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/(?<path>.*), /$\{path}
+
+management:
+  endpoint:
+    gateway:
+      enabled: true # default value
+    web:
+      exposure:
+        include: gateway
+
+logging.level.org.springframework.cloud.consul: DEBUG
