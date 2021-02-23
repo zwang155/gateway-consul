@@ -16,6 +16,10 @@ service is written using [micronaut](https://micronaut.io)
 - [service2](/service2): this service is reference by service1. This 
 service is written using [micronaut](https://micronaut.io)
 
+### Requirements
+- Java 11. The services are set to use java 11
+- Docker. Consul is started using docker
+
 ### Running
 First we need to start Consul by running [run-consul.sh](run-consul.sh). This script
 uses docker to pull the latest consul image and runs it locally. After consul start,
