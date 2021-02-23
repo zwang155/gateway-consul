@@ -11,8 +11,10 @@ The objective of this project is three folds:
 ### Services
 There are 3 services created in this sample project:
 - [gateway](/gateway): this is the Spring Cloud Gateway
-- [service1](/service1): this is the service that is exposed by the gateway
-- [service2](/service2): this service is reference by service1
+- [service1](/service1): this is the service that is exposed by the gateway. This 
+service is written using [micronaut](https://micronaut.io)
+- [service2](/service2): this service is reference by service1. This 
+service is written using [micronaut](https://micronaut.io)
 
 ### Running
 First we need to start Consul by running [run-consul.sh](run-consul.sh). This script
