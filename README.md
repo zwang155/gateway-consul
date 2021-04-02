@@ -1,3 +1,14 @@
+### A10 - Circuit Breaker
+- All services are working
+![screenshot - all services work](https://github.com/zwang155/gateway-consul/blob/main/all%20services%20work.png)
+
+- Service 2 is down and fallback
+![screenshot - service2 down](https://github.com/zwang155/gateway-consul/blob/main/service2%20down.png)
+
+- Service 1 is down and fallback
+![screenshot - service1 down](https://github.com/zwang155/gateway-consul/blob/main/service1%20down.png)
+
+
 ### Introduction
 This repo is a sample code to show the usage of an API Gateway. The project uses
 [Spring Cloud Gateway](https://cloud.spring.io/spring-cloud-gateway/reference/html/) 
